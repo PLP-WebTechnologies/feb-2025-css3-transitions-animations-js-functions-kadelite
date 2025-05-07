@@ -1,0 +1,148 @@
+/* Base styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 20px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Theme styles */
+body.light {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+body.dark {
+  background-color: #333;
+  color: #f5f5f5;
+}
+
+body.blue {
+  background-color: #e6f2ff;
+  color: #003366;
+}
+
+/* Preference section */
+.preference-section {
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.preference-control {
+  margin-bottom: 15px;
+}
+
+select, button {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation section */
+.animation-section {
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.animated-box {
+  width: 150px;
+  height: 150px;
+  background-color: #ff6b6b;
+  margin: 20px auto;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Animation classes */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.bounce {
+  animation: bounce 1s infinite;
+}
+
+.spin {
+  animation: spin 2s linear infinite;
+}
+
+.pulse {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Speed modifiers */
+.slow {
+  animation-duration: 2s;
+}
+
+.normal {
+  animation-duration: 1s;
+}
+
+.fast {
+  animation-duration: 0.5s;
+}
+
+/* Image gallery */
+.image-gallery {
+  padding: 20px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.gallery {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.gallery-img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
